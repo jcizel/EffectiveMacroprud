@@ -2,46 +2,50 @@
 layout: default
 ---
 <div class="container">
-	<header class="clearfix">
-		<h1>{{ site.name }}</h1>
-	</header>
-	<div id="grid-gallery" class="grid-gallery">
+  <header class="clearfix">
+    <!-- <h1>{{ site.name }}</h1> -->
+    <h1>Effective Macroprudential Policy:</h1>
+    <h2>Cross-Sector Substitution of Price and Quantity Measures </h2>
+    <h3>By Janko Cizel, Jon Frost, Aerdt Houben, and Peter Wierts</h3>
+    <h3 style="color:red">Coming soon...</h3>
+  </header>
+  <div id="grid-gallery" class="grid-gallery">
 
-	<section class="grid-wrap">
-	<ul class="grid">
-		<li class="grid-sizer"></li><!-- for Masonry column width -->
-		{% for post in site.posts %}
-		<li>
-			<figure>
-				<img src="{{ site.url }}/img/thumb/{{ post.photo }}" alt="img"/>
-				<figcaption>
-					<h3>{{ post.caption_header}}</h3>
-					<p>{{ post.caption }}</p>
-				</figcaption>
-			</figure>
-		</li>
-		{% endfor %}
-	</ul>
-	</section><!-- // grid-wrap -->
+    <section class="grid-wrap">
+      <ul class="grid">
+	<li class="grid-sizer"></li><!-- for Masonry column width -->
+	{% for post in site.posts %}
+	<li>
+	  <figure>
+	    <img src="{{ site.url }}/img/thumb/{{ post.photo }}" alt="img"/>
+	    <figcaption>
+	      <h3>{{ post.caption_header}}</h3>
+	      <p>{{ post.caption }}</p>
+	    </figcaption>
+	  </figure>
+	</li>
+	{% endfor %}
+      </ul>
+    </section><!-- // grid-wrap -->
 
-	<section class="slideshow">
-	<ul>
-		{% for post in site.posts %}
-		<li>
-			<figure>
-				<img src="{{ site.url }}/img/large/{{ post.photo }}" alt="img"/>
-				<figcaption><h3>{{ post.caption_header}}</h3><p>{{ post.caption }}</p></figcaption>
-			</figure>
-		</li>
-		{% endfor %}
-	</ul>
-	<nav>
-		<span class="icon nav-prev"></span>
-		<span class="icon nav-next"></span>
-		<span class="icon nav-close"></span>
-	</nav>
-	<div class="info-keys icon">Navigate with arrow keys</div>
-	</section><!-- // slideshow -->
+    <section class="slideshow">
+      <ul>
+	{% for post in site.posts %}
+	<li>
+	  <figure height="1000">
+	    <figcaption><h3>{{ post.caption_header}}</h3><p>{{ post.caption }}</p></figcaption>		    
+	    <img src="{{ site.url }}/img/large/{{ post.photo }}" alt="img"/>
+	  </figure>
+	</li>
+	{% endfor %}
+      </ul>
+      <nav>
+	<span class="icon nav-prev"></span>
+	<span class="icon nav-next"></span>
+	<span class="icon nav-close"></span>
+      </nav>
+      <div class="info-keys icon">Navigate with arrow keys</div>
+    </section><!-- // slideshow -->
 
-	</div><!-- // grid-gallery -->
+  </div><!-- // grid-gallery -->
 </div>
